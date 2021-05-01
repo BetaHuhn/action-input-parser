@@ -1,0 +1,34 @@
+{
+  "name": "node-starter",
+  "version": "1.0.3",
+  "description": "Starter repo for Node.js project",
+  "bin": "./dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "lint": "eslint ./src/",
+    "build": "ncc build src/index.js -o dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BetaHuhn/node-starter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/BetaHuhn/node-starter/issues"
+  },
+  "homepage": "https://github.com/BetaHuhn/node-starter#readme",
+  "author": "Maximilian Schiller <schiller@mxis.ch>",
+  "license": "MIT",
+  "keywords": [
+    "nodejs"
+  ],
+  "dependencies": {
+    "dotenv": "^8.2.0"
+  },
+  "devDependencies": {
+    "@betahuhn/config": "^1.1.0",
+    "@vercel/ncc": "^0.28.4",
+    "eslint": "^7.25.0"
+  }
+}
