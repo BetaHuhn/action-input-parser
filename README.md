@@ -10,12 +10,12 @@ Helper for parsing inputs in a GitHub Action
 
 ## ⭐ Features
 
-- Similar API to [`core.getInput()`](https://github.com/actions/toolkit/tree/main/packages/core)
-- Parses string, booleans and arrays to correct JS types
-- Specify default values if no input was provided
-- Throws errors if input is set to required and is missing
-- Uses local environment variables (and `.env` files) during development
-- Modify values after parsing
+- Similar API to [`core.getInput()`](https://github.com/actions/toolkit/tree/main/packages/core#inputsoutputs)
+- Parses [string, booleans and arrays](#types) to correct JS types
+- Supports [default values](#default-values) if no input was provided
+- Throws errors if input is set to [required](#required-inputs) and is missing
+- Uses local environment variables (and `.env` files) during [development](#development)
+- Specify a [custom function](#modify-the-parsed-input) for advanced parsing
 
 ## 🚀 Get started
 
@@ -34,7 +34,9 @@ const parser = require('action-input-parser')
 const value = parser.getInput('name')
 ```
 
-Let's say you have the following workflow file:
+### Example
+
+Let's say you have the following workflow file (see [below](#development) on how to specify inputs during development):
 
 ```yml
 uses: username/action
@@ -44,7 +46,7 @@ with:
         Richard
 ```
 
-Pass an options object to the `getInput` function to specify the type:
+Pass an options object to the `getInput` function to specify the `array` type:
 
 ```js
 const parser = require('action-input-parser')
@@ -56,7 +58,9 @@ const value = parser.getInput('names', {
 // [ 'Maximilian', 'Richard' ]
 ```
 
-See below for all options or checkout a few more examples.
+[action-input-parser](https://github.com/BetaHuhn/action-input-parser) will parse the `names` input and return an array.
+
+See below for [all options](#all-options) or checkout a few more [examples](#-examples).
 
 ## ⚙️ Configuration
 
@@ -94,13 +98,19 @@ You can specify one of the following types which will determine how the input is
 - `boolean` - will parse a boolean based on the [yaml 1.2 specification](https://yaml.org/spec/1.2/spec.html#id2804923)
 - `array` - will parse line or comma seperated values to an array
 
+[See example](#specify-a-type)
+
 ### Required inputs
 
 When you set required to true and the input is not set, [action-input-parser](https://github.com/BetaHuhn/action-input-parser) will throw an error.
 
+[See example](#set-an-input-to-be-required)
+
 ### Default values
 
 You can specify a default value for the input which will be used when the input is not set.
+
+[See example](#specify-a-default-value)
 
 ### Disableable input
 
@@ -108,9 +118,17 @@ If you have an input with a default value but you still want the user to be able
 
 When the input is then set to `false`, [action-input-parser](https://github.com/BetaHuhn/action-input-parser) will return `undefined` instead of your default value.
 
+[See example](#disable-an-input)
+
 ### Modifier function
 
 If your input needs additional processing you can specify a function which will be passed the parsed input value.
+
+[See example](#modify-the-parsed-input)
+
+### Development
+
+If you run your Action locally during development, you can set the inputs as environment variables or specify them in a `.env` file. [action-input-parser](https://github.com/BetaHuhn/action-input-parser) will use them as the inputs automatically.
 
 ## 📖 Examples
 
