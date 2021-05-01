@@ -1,1 +1,1 @@
-module.exports = require('@betahuhn/config').eslint
+module.exports = require('@betahuhn/config').eslintTypescript
