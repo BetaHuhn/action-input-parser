@@ -1,8 +1,8 @@
 <div align="center">
   
-# 💻 Node Starter
+# GitHub Action Config Parser
 
-[![Node CI](https://github.com/BetaHuhn/node-starter/workflows/Node%20CI/badge.svg)](https://github.com/BetaHuhn/node-starter/actions?query=workflow%3A%22Node+CI%22) [![Release CI](https://github.com/BetaHuhn/node-starter/workflows/Release%20CI/badge.svg)](https://github.com/BetaHuhn/node-starter/actions?query=workflow%3A%22Release+CI%22) [![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/BetaHuhn/node-starter/blob/master/LICENSE) ![David](https://img.shields.io/david/betahuhn/node-starter)
+[![Node CI](https://github.com/BetaHuhn/action-config-parser/workflows/Node%20CI/badge.svg)](https://github.com/BetaHuhn/action-config-parser/actions?query=workflow%3A%22Node+CI%22) [![Release CI](https://github.com/BetaHuhn/action-config-parser/workflows/Release%20CI/badge.svg)](https://github.com/BetaHuhn/action-config-parser/actions?query=workflow%3A%22Release+CI%22) [![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/BetaHuhn/action-config-parser/blob/master/LICENSE) ![David](https://img.shields.io/david/betahuhn/action-config-parser)
 
 Starter repo for Node.js project
 

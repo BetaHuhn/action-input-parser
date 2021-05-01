@@ -1,7 +1,7 @@
 {
-  "name": "node-starter",
-  "version": "1.0.3",
-  "description": "Starter repo for Node.js project",
+  "name": "action-config-parser",
+  "version": "0.1.0",
+  "description": "",
   "bin": "./dist/index.js",
   "files": [
     "dist"
@@ -12,12 +12,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/BetaHuhn/node-starter.git"
+    "url": "git+https://github.com/BetaHuhn/action-config-parser.git"
   },
   "bugs": {
-    "url": "https://github.com/BetaHuhn/node-starter/issues"
+    "url": "https://github.com/BetaHuhn/action-config-parser/issues"
   },
-  "homepage": "https://github.com/BetaHuhn/node-starter#readme",
+  "homepage": "https://github.com/BetaHuhn/action-config-parser#readme",
   "author": "Maximilian Schiller <schiller@mxis.ch>",
   "license": "MIT",
   "keywords": [
