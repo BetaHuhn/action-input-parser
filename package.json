@@ -1,7 +1,7 @@
 {
   "name": "action-config-parser",
   "version": "0.1.0",
-  "description": "",
+  "description": "Helper for parsing inputs in a GitHub Action",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "files": [
@@ -23,7 +23,11 @@
   "author": "Maximilian Schiller <schiller@mxis.ch>",
   "license": "MIT",
   "keywords": [
-    "nodejs"
+    "nodejs",
+    "github-actions",
+    "github-actions-typescript",
+    "github-actions-javascript",
+    "config-parser"
   ],
   "dependencies": {
     "dotenv": "^8.2.0"
@@ -37,5 +41,8 @@
     "ts-node": "^9.1.1",
     "tsc-watch": "^4.2.9",
     "typescript": "^4.2.4"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
