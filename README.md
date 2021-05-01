@@ -1,8 +1,8 @@
 <div align="center">
   
-# Action Config Parser
+# Action Input Parser
 
-[![Node CI](https://github.com/BetaHuhn/action-config-parser/workflows/Node%20CI/badge.svg)](https://github.com/BetaHuhn/action-config-parser/actions?query=workflow%3A%22Node+CI%22) [![Release CI](https://github.com/BetaHuhn/action-config-parser/workflows/Release%20CI/badge.svg)](https://github.com/BetaHuhn/action-config-parser/actions?query=workflow%3A%22Release+CI%22) [![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/BetaHuhn/action-config-parser/blob/master/LICENSE) ![David](https://img.shields.io/david/betahuhn/action-config-parser)
+[![Node CI](https://github.com/BetaHuhn/action-input-parser/workflows/Node%20CI/badge.svg)](https://github.com/BetaHuhn/action-input-parser/actions?query=workflow%3A%22Node+CI%22) [![Release CI](https://github.com/BetaHuhn/action-input-parser/workflows/Release%20CI/badge.svg)](https://github.com/BetaHuhn/action-input-parser/actions?query=workflow%3A%22Release+CI%22) [![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/BetaHuhn/action-input-parser/blob/master/LICENSE) ![David](https://img.shields.io/david/betahuhn/action-input-parser)
 
 Helper for parsing inputs in a GitHub Action
 
@@ -19,17 +19,17 @@ Helper for parsing inputs in a GitHub Action
 
 ## 🚀 Get started
 
-Install [action-config-parser](https://github.com/BetaHuhn/action-config-parser) via npm:
+Install [action-input-parser](https://github.com/BetaHuhn/action-input-parser) via npm:
 ```shell
-npm install action-config-parser
+npm install action-input-parser
 ```
 
 ## 📚 Usage
 
-Import `action-config-parser` and use it like this:
+Import `action-input-parser` and use it like this:
 
 ```js
-const parser = require('action-config-parser')
+const parser = require('action-input-parser')
 
 const value = parser.getInput('name')
 ```
@@ -47,7 +47,7 @@ with:
 Pass an options object to the `getInput` function to specify the type:
 
 ```js
-const parser = require('action-config-parser')
+const parser = require('action-input-parser')
 
 const value = parser.getInput('names', {
     type: 'array'
@@ -60,7 +60,7 @@ See below for all options or checkout a few more examples.
 
 ## ⚙️ Configuration
 
-You can pass the following JavaScript object to `getInput` as the first or second parameter to tell [action-config-parser](https://github.com/BetaHuhn/action-config-parser) what to parse:
+You can pass the following JavaScript object to `getInput` as the first or second parameter to tell [action-input-parser](https://github.com/BetaHuhn/action-input-parser) what to parse:
 
 ```js
 const options = {
@@ -96,7 +96,7 @@ You can specify one of the following types which will determine how the input is
 
 ### Required inputs
 
-When you set required to true and the input is not set, [action-config-parser](https://github.com/BetaHuhn/action-config-parser) will throw an error.
+When you set required to true and the input is not set, [action-input-parser](https://github.com/BetaHuhn/action-input-parser) will throw an error.
 
 ### Default values
 
@@ -106,7 +106,7 @@ You can specify a default value for the input which will be used when the input 
 
 If you have an input with a default value but you still want the user to be able to unset the input, set the `disableable` option to `true`.
 
-When the input is then set to `false`, [action-config-parser](https://github.com/BetaHuhn/action-config-parser) will return `undefined` instead of your default value.
+When the input is then set to `false`, [action-input-parser](https://github.com/BetaHuhn/action-input-parser) will return `undefined` instead of your default value.
 
 ### Modifier function
 
@@ -114,7 +114,7 @@ If your input needs additional processing you can specify a function which will 
 
 ## 📖 Examples
 
-Here are some examples on how to use [action-config-parser](https://github.com/BetaHuhn/action-config-parser):
+Here are some examples on how to use [action-input-parser](https://github.com/BetaHuhn/action-input-parser):
 
 ### Basic example
 
@@ -129,7 +129,7 @@ with:
 Action code:
 
 ```js
-const parser = require('action-config-parser')
+const parser = require('action-input-parser')
 
 const value = parser.getInput('name')
 
@@ -139,7 +139,7 @@ const value = parser.getInput('name')
 or 
 
 ```js
-const parser = require('action-config-parser')
+const parser = require('action-input-parser')
 
 const value = parser.getInput({
     key: 'name'
@@ -161,7 +161,7 @@ with:
 Action code:
 
 ```js
-const parser = require('action-config-parser')
+const parser = require('action-input-parser')
 
 const value = parser.getInput({ 
     key: 'dry_run',
@@ -176,7 +176,7 @@ const value = parser.getInput({
 Action code:
 
 ```js
-const parser = require('action-config-parser')
+const parser = require('action-input-parser')
 
 const value = parser.getInput({ 
     key: 'name',
@@ -191,7 +191,7 @@ const value = parser.getInput({
 Action code:
 
 ```js
-const parser = require('action-config-parser')
+const parser = require('action-input-parser')
 
 const value = parser.getInput({
     key: 'name',
@@ -214,7 +214,7 @@ with:
 Action code:
 
 ```js
-const parser = require('action-config-parser')
+const parser = require('action-input-parser')
 
 const value = parser.getInput({
     key: 'labels', 
@@ -238,7 +238,7 @@ with:
 Action code:
 
 ```js
-const parser = require('action-config-parser')
+const parser = require('action-input-parser')
 
 const value = parser.getInput({
     key: 'name',
@@ -267,7 +267,7 @@ with:
 Action code:
 
 ```js
-const { getInput } = require('action-config-parser')
+const { getInput } = require('action-input-parser')
 
 const config = {
     githubToken: getInput({

@@ -1,5 +1,5 @@
 {
-  "name": "action-config-parser",
+  "name": "action-input-parser",
   "version": "0.1.0",
   "description": "Helper for parsing inputs in a GitHub Action",
   "main": "lib/index.js",
@@ -14,12 +14,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/BetaHuhn/action-config-parser.git"
+    "url": "git+https://github.com/BetaHuhn/action-input-parser.git"
   },
   "bugs": {
-    "url": "https://github.com/BetaHuhn/action-config-parser/issues"
+    "url": "https://github.com/BetaHuhn/action-input-parser/issues"
   },
-  "homepage": "https://github.com/BetaHuhn/action-config-parser#readme",
+  "homepage": "https://github.com/BetaHuhn/action-input-parser#readme",
   "author": "Maximilian Schiller <schiller@mxis.ch>",
   "license": "MIT",
   "keywords": [
