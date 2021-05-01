@@ -46,7 +46,7 @@ const parseValue = (val: string, type: string): InputValue => {
 		}
 
 		return val.trim()
-	} catch(err) {
+	} catch (err) {
 		return err
 	}
 }
@@ -65,7 +65,7 @@ export const getInput = (key: string | IOpts, opts: IOpts): InputValue => {
 	}
 
 	if (!parsedOptions.key) throw new Error('No key for input specified')
-	
+
 	const options = Object.assign({}, DEFAULT_OPTIONS, parsedOptions) as IParsedOpts
 
 	if (VALID_TYPES.includes(options.type) === false) throw new Error('option type has to be one of `string | array | boolean`')

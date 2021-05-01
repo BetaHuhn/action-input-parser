@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 type ModifierFunction = (val: InputValue) => InputValue
 
 export type InputValue = undefined | string | boolean | Array<string | boolean>
