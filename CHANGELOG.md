@@ -1,3 +1,11 @@
+## [v1.1.0] - 2021-05-02
+
+[Release notes](https://github.com/BetaHuhn/action-input-parser/releases/tag/v1.1.0) · [Compare](https://github.com/BetaHuhn/action-input-parser/compare/v1.0.1...v1.1.0) · [Tag](https://github.com/BetaHuhn/action-input-parser/tree/v1.1.0) · Archive ([zip](https://github.com/BetaHuhn/action-input-parser/archive/v1.1.0.zip) · [tar.gz](https://github.com/BetaHuhn/action-input-parser/archive/v1.1.0.tar.gz))
+
+### New features
+
+- [`2ba511f`](https://github.com/BetaHuhn/action-input-parser/commit/2ba511f)  Add number type
+
 ## [v1.0.1] - 2021-05-02
 
 [Release notes](https://github.com/BetaHuhn/action-input-parser/releases/tag/v1.0.1) · [Compare](https://github.com/BetaHuhn/action-input-parser/compare/v1.0.0...v1.0.1) · [Tag](https://github.com/BetaHuhn/action-input-parser/tree/v1.0.1) · Archive ([zip](https://github.com/BetaHuhn/action-input-parser/archive/v1.0.1.zip) · [tar.gz](https://github.com/BetaHuhn/action-input-parser/archive/v1.0.1.tar.gz))
