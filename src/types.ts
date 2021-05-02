@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 type ModifierFunction = (val: InputValue) => InputValue
 
-export type InputValue = undefined | string | boolean | Array<string | boolean>
+export type InputValue = undefined | string | boolean | number | Array<string | boolean | number>
 
 export interface IOpts {
     key?: string

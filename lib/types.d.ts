@@ -1,5 +1,5 @@
 declare type ModifierFunction = (val: InputValue) => InputValue;
-export declare type InputValue = undefined | string | boolean | Array<string | boolean>;
+export declare type InputValue = undefined | string | boolean | number | Array<string | boolean | number>;
 export interface IOpts {
     key?: string;
     type?: string;

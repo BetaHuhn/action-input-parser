@@ -3,7 +3,7 @@ dotenv.config()
 
 import { IOpts, IParsedOpts, InputValue } from './types'
 
-const VALID_TYPES = [ 'string', 'array', 'boolean' ]
+const VALID_TYPES = [ 'string', 'array', 'boolean', 'number' ]
 
 const DEFAULT_OPTIONS: IOpts = {
 	required: false,
@@ -35,6 +35,14 @@ const parseBoolean = (val: string) => {
 	throw new Error('boolean input has to be one of \`true | True | TRUE | false | False | FALSE\`')
 }
 
+const parseNumber = (val: string) => {
+	const parsed = Number(val)
+
+	if (isNaN(parsed)) throw new Error('input has to be a valid number')
+
+	return parsed
+}
+
 const parseValue = (val: string, type: string): InputValue => {
 	if (type === 'array') {
 		return parseArray(val)
@@ -42,6 +50,10 @@ const parseValue = (val: string, type: string): InputValue => {
 
 	if (type === 'boolean') {
 		return parseBoolean(val)
+	}
+
+	if (type === 'number') {
+		return parseNumber(val)
 	}
 
 	return val.trim()
@@ -64,7 +76,7 @@ export const getInput = (key: string | IOpts, opts: IOpts): InputValue => {
 
 	const options = Object.assign({}, DEFAULT_OPTIONS, parsedOptions) as IParsedOpts
 
-	if (VALID_TYPES.includes(options.type) === false) throw new Error('option type has to be one of `string | array | boolean`')
+	if (VALID_TYPES.includes(options.type) === false) throw new Error('option type has to be one of `string | array | boolean | number`')
 
 	const val = getEnvVar(options.key)
 

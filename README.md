@@ -11,7 +11,7 @@ Helper for parsing inputs in a GitHub Action
 ## ⭐ Features
 
 - Similar API to [`core.getInput()`](https://github.com/actions/toolkit/tree/main/packages/core#inputsoutputs)
-- Parses [string, booleans and arrays](#types) to correct JS types
+- Parses [string, booleans, numbers and arrays](#types) to correct JS types
 - Supports [default values](#default-values) if no input was provided
 - Throws errors if input is set to [required](#required-inputs) and is missing
 - Uses local environment variables (and `.env` files) during [development](#development)
@@ -84,7 +84,7 @@ Here are all the options you can use and there default values:
 | Name | Description | Required | Default |
 | ------------- | ------------- | ------------- | ------------- |
 | `key` | The key of the input option | **Yes** | N/A |
-| `type` | The type of the input value (`string`/`boolean`/`array`) | **No** | `string` |
+| `type` | The type of the input value (`string`/`boolean`/`number`/`array`) | **No** | `string` |
 | `required` | Specify if the input is required | **No** | false |
 | `default` | Specify a default value for the input | **No** | N/A |
 | `disableable` | Specify if the input should be able to be disabled by setting it to `false` | **No** | `false` |
@@ -96,7 +96,10 @@ You can specify one of the following types which will determine how the input is
 
 - `string` - default type, the input value will only be trimmed
 - `boolean` - will parse a boolean based on the [yaml 1.2 specification](https://yaml.org/spec/1.2/spec.html#id2804923)
+- `number` - will convert the input to a number
 - `array` - will parse line or comma seperated values to an array
+
+> Note: if the input can not be converted to the specifed type, an error is thrown
 
 [See example](#specify-a-type)
 
