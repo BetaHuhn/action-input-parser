@@ -36,19 +36,15 @@ const parseBoolean = (val: string) => {
 }
 
 const parseValue = (val: string, type: string): InputValue => {
-	try {
-		if (type === 'array') {
-			return parseArray(val)
-		}
-
-		if (type === 'boolean') {
-			return parseBoolean(val)
-		}
-
-		return val.trim()
-	} catch (err) {
-		return err
+	if (type === 'array') {
+		return parseArray(val)
 	}
+
+	if (type === 'boolean') {
+		return parseBoolean(val)
+	}
+
+	return val.trim()
 }
 
 export const getInput = (key: string | IOpts, opts: IOpts): InputValue => {
