@@ -71,9 +71,9 @@ export const getInput = (key: string | IOpts, opts: IOpts): InputValue => {
 	if (options.disableable && val === 'false') return undefined
 
 	const parsed: InputValue = val !== undefined ? parseValue(val, options.type) : undefined
-	if (!parsed) {
+	if (parsed === undefined) {
 		if (options.required) throw new Error(`Input \`${ options.key }\` is required but was not provided.`)
-		if (options.default) return options.default
+		if (options.default !== undefined) return options.default
 
 		return undefined
 	}
