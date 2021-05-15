@@ -4,7 +4,7 @@ type ModifierFunction = (val: InputValue) => InputValue
 export type InputValue = undefined | string | boolean | number | Array<string | boolean | number>
 
 export interface IOpts {
-    key?: string
+    key?: string | Array<string>
     type?: string
     required?: boolean,
     disableable?: boolean
@@ -13,7 +13,7 @@ export interface IOpts {
 }
 
 export interface IParsedOpts {
-    key: string
+    key: string | Array<string>
     type: string
     required: boolean,
     disableable: boolean

@@ -59,9 +59,9 @@ const parseValue = (val: string, type: string): InputValue => {
 	return val.trim()
 }
 
-export const getInput = (key: string | IOpts, opts: IOpts): InputValue => {
+export const getInput = (key: string | Array<string> | IOpts, opts: IOpts): InputValue => {
 	let parsedOptions: IOpts
-	if (typeof key === 'string') {
+	if (typeof key === 'string' || Array.isArray(key)) {
 		parsedOptions = {
 			key: key,
 			...opts
@@ -78,7 +78,7 @@ export const getInput = (key: string | IOpts, opts: IOpts): InputValue => {
 
 	if (VALID_TYPES.includes(options.type) === false) throw new Error('option type has to be one of `string | array | boolean | number`')
 
-	const val = getEnvVar(options.key)
+	const val = typeof options.key === 'string' ? getEnvVar(options.key) : options.key.map((key) => getEnvVar(key)).filter((item) => item)[0]
 
 	if (options.disableable && val === 'false') return undefined
 

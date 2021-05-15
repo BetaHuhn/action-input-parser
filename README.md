@@ -16,6 +16,7 @@ Helper for parsing inputs in a GitHub Action
 - Throws errors if input is set to [required](#required-inputs) and is missing
 - Uses local environment variables (and `.env` files) during [development](#development)
 - Specify a [custom function](#modify-the-parsed-input) for advanced parsing
+- Supports [array of keys](#key)
 
 ## 🚀 Get started
 
@@ -83,12 +84,18 @@ Here are all the options you can use and there default values:
 
 | Name | Description | Required | Default |
 | ------------- | ------------- | ------------- | ------------- |
-| `key` | The key of the input option | **Yes** | N/A |
+| `key` | The key of the input option (can also be an array of keys) | **Yes** | N/A |
 | `type` | The type of the input value (`string`/`boolean`/`number`/`array`) | **No** | `string` |
 | `required` | Specify if the input is required | **No** | false |
 | `default` | Specify a default value for the input | **No** | N/A |
 | `disableable` | Specify if the input should be able to be disabled by setting it to `false` | **No** | `false` |
 | `modifier` | A function which gets passed the parsed value as a parameter and returns another value  | **No** | N/A |
+
+### Key
+
+You can either specify a single key as a string, or multiple keys as an array of strings.
+
+[See example](#multiple-keys)
 
 ### Types
 
@@ -244,6 +251,20 @@ const value = parser.getInput({
 })
 
 // Value will be undefined because labels was set to false
+```
+
+### Multiple Keys
+
+Action code:
+
+```js
+const parser = require('action-input-parser')
+
+const value = parser.getInput({ 
+    key: [ 'GITHUB_TOKEN', 'GH_PAT' ]
+})
+
+// The first key takes precedence
 ```
 
 ### Modify the parsed input
