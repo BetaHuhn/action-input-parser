@@ -1,3 +1,13 @@
+## [v1.2.8] - 2021-07-12
+
+[Release notes](https://github.com/BetaHuhn/action-input-parser/releases/tag/v1.2.8) · [Compare](https://github.com/BetaHuhn/action-input-parser/compare/v1.2.7...v1.2.8) · [Tag](https://github.com/BetaHuhn/action-input-parser/tree/v1.2.8) · Archive ([zip](https://github.com/BetaHuhn/action-input-parser/archive/v1.2.8.zip) · [tar.gz](https://github.com/BetaHuhn/action-input-parser/archive/v1.2.8.tar.gz))
+
+### Dependency updates
+
+- [`865320b`](https://github.com/BetaHuhn/action-input-parser/commit/865320b)  Bump eslint from 7.29.0 to 7.30.0
+- [`9312579`](https://github.com/BetaHuhn/action-input-parser/commit/9312579)  Bump @typescript-eslint/parser from 4.28.1 to 4.28.2
+- [`fcc7b89`](https://github.com/BetaHuhn/action-input-parser/commit/fcc7b89)  Bump @typescript-eslint/eslint-plugin from 4.28.1 to 4.28.2
+
 ## [v1.2.7] - 2021-07-05
 
 [Release notes](https://github.com/BetaHuhn/action-input-parser/releases/tag/v1.2.7) · [Compare](https://github.com/BetaHuhn/action-input-parser/compare/v1.2.6...v1.2.7) · [Tag](https://github.com/BetaHuhn/action-input-parser/tree/v1.2.7) · Archive ([zip](https://github.com/BetaHuhn/action-input-parser/archive/v1.2.7.zip) · [tar.gz](https://github.com/BetaHuhn/action-input-parser/archive/v1.2.7.tar.gz))
