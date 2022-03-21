@@ -1,3 +1,11 @@
+## [v1.2.30] - 2022-03-21
+
+[Release notes](https://github.com/BetaHuhn/action-input-parser/releases/tag/v1.2.30) · [Compare](https://github.com/BetaHuhn/action-input-parser/compare/v1.2.29...v1.2.30) · [Tag](https://github.com/BetaHuhn/action-input-parser/tree/v1.2.30) · Archive ([zip](https://github.com/BetaHuhn/action-input-parser/archive/v1.2.30.zip) · [tar.gz](https://github.com/BetaHuhn/action-input-parser/archive/v1.2.30.tar.gz))
+
+### Dependency updates
+
+- [`764f81c`](https://github.com/BetaHuhn/action-input-parser/commit/764f81c)  Bump tsc-watch from 4.6.1 to 4.6.2
+
 ## [v1.2.29] - 2022-03-14
 
 [Release notes](https://github.com/BetaHuhn/action-input-parser/releases/tag/v1.2.29) · [Compare](https://github.com/BetaHuhn/action-input-parser/compare/v1.2.28...v1.2.29) · [Tag](https://github.com/BetaHuhn/action-input-parser/tree/v1.2.29) · Archive ([zip](https://github.com/BetaHuhn/action-input-parser/archive/v1.2.29.zip) · [tar.gz](https://github.com/BetaHuhn/action-input-parser/archive/v1.2.29.tar.gz))
