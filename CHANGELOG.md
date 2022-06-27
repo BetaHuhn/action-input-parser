@@ -1,3 +1,11 @@
+## [v1.2.35] - 2022-06-27
+
+[Release notes](https://github.com/BetaHuhn/action-input-parser/releases/tag/v1.2.35) · [Compare](https://github.com/BetaHuhn/action-input-parser/compare/v1.2.34...v1.2.35) · [Tag](https://github.com/BetaHuhn/action-input-parser/tree/v1.2.35) · Archive ([zip](https://github.com/BetaHuhn/action-input-parser/archive/v1.2.35.zip) · [tar.gz](https://github.com/BetaHuhn/action-input-parser/archive/v1.2.35.tar.gz))
+
+### Dependency updates
+
+- [`9460cd5`](https://github.com/BetaHuhn/action-input-parser/commit/9460cd5)  Bump typescript from 4.7.3 to 4.7.4
+
 ## [v1.2.34] - 2022-06-13
 
 [Release notes](https://github.com/BetaHuhn/action-input-parser/releases/tag/v1.2.34) · [Compare](https://github.com/BetaHuhn/action-input-parser/compare/v1.2.33...v1.2.34) · [Tag](https://github.com/BetaHuhn/action-input-parser/tree/v1.2.34) · Archive ([zip](https://github.com/BetaHuhn/action-input-parser/archive/v1.2.34.zip) · [tar.gz](https://github.com/BetaHuhn/action-input-parser/archive/v1.2.34.tar.gz))
