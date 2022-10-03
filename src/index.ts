@@ -1,7 +1,7 @@
 import dotenv from 'dotenv'
-dotenv.config()
+import { ArrayOpts, BaseInputValue, BooleanOpts, InputValue, IOpts, IParsedOpts, NumberOpts, StringOpts } from './types'
 
-import { IOpts, IParsedOpts, InputValue } from './types'
+dotenv.config()
 
 const VALID_TYPES = [ 'string', 'array', 'boolean', 'number' ]
 
@@ -59,7 +59,16 @@ const parseValue = (val: string, type: string): InputValue => {
 	return val.trim()
 }
 
-export const getInput = (key: string | Array<string> | IOpts, opts: IOpts): InputValue => {
+// eslint-disable-next-line no-unused-vars
+export function getInput(key: string | Array<string> | IOpts, opts: BooleanOpts): boolean;
+// eslint-disable-next-line no-unused-vars,no-redeclare
+export function getInput(key: string | Array<string> | IOpts, opts: StringOpts): string;
+// eslint-disable-next-line no-unused-vars,no-redeclare
+export function getInput(key: string | Array<string> | IOpts, opts: NumberOpts): number;
+// eslint-disable-next-line no-unused-vars,no-redeclare
+export function getInput(key: string | Array<string> | IOpts, opts: ArrayOpts): BaseInputValue[];
+// eslint-disable-next-line no-redeclare
+export function getInput(key: string | Array<string> | IOpts, opts: IOpts): InputValue {
 	let parsedOptions: IOpts
 	if (typeof key === 'string' || Array.isArray(key)) {
 		parsedOptions = {
